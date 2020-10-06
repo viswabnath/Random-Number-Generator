@@ -1,14 +1,39 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <span text-color="title">
+        <ion-icon name="swap"></ion-icon> RANDOM
+      </span>
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content class="page">
+  <ion-row justify-content-center>
+    <ion-card>
+      <!-- <img src="https://i.pinimg.com/originals/99/1b/1c/991b1c01a40aeec224980e5a4a584fcb.gif" /> -->
+      <div class="card-title">
+        <h1 style="color:black; font-size: 50px;">{{result}}</h1>
+        <button (click)="changeText(text)" ngDefaultControl name="text" [(ngModel)]="text" ion-button color="success"
+          outline>
+          {{text}}  
+        </button>
+      </div>
+    </ion-card>
+  </ion-row>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-row justify-content-center>
+    <ion-card>
+      <!-- <img src="https://avatars.mds.yandex.net/get-pdb/1221543/7dbeb958-811d-4dd5-a818-4eac673addf6/orig" /> -->
+      <div class="card-title">
+        <h1 style="color:black; font-size: 50px;">{{resulttwo}}</h1>
+        <button (click)="changeTexttwo(texttwo)" ngDefaultControl name="texttwo" [(ngModel)]="texttwo" ion-button
+          color="danger" outline>
+          {{texttwo}}
+        </button>
+      </div>
+    </ion-card>
+  </ion-row>
+
+
+
 </ion-content>
